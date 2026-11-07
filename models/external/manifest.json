@@ -1,0 +1,51 @@
+{
+  "repository": "ShannonAI/ChineseBERT-base",
+  "revision": "aa8b6fa9c3427f77b0911b07ab35f2b1b8bf248b",
+  "files": [
+    {
+      "file": "README.md",
+      "url": "https://huggingface.co/ShannonAI/ChineseBERT-base/resolve/aa8b6fa9c3427f77b0911b07ab35f2b1b8bf248b/README.md",
+      "bytes": 1574,
+      "sha256": "ec0c21fd13cbdfd78d52da7b43f48d5ac31ed773ac477ccd42823321b0b8545b"
+    },
+    {
+      "file": "config.json",
+      "url": "https://huggingface.co/ShannonAI/ChineseBERT-base/resolve/aa8b6fa9c3427f77b0911b07ab35f2b1b8bf248b/config.json",
+      "bytes": 687,
+      "sha256": "c014e9694a4a9bf2ffdade6a16466c6220bcb0989bf23123ce759aed27fdded8"
+    },
+    {
+      "file": "vocab.txt",
+      "url": "https://huggingface.co/ShannonAI/ChineseBERT-base/resolve/aa8b6fa9c3427f77b0911b07ab35f2b1b8bf248b/vocab.txt",
+      "bytes": 117890,
+      "sha256": "8de924e32def1a85879c4e153d4ebee505d96702c477db4b712698971f7b3698"
+    },
+    {
+      "file": "config/pinyin_map.json",
+      "url": "https://huggingface.co/ShannonAI/ChineseBERT-base/resolve/aa8b6fa9c3427f77b0911b07ab35f2b1b8bf248b/config/pinyin_map.json",
+      "bytes": 466,
+      "sha256": "4e2181bd903d58c876b12f1942ba535b8a329ecc93d916ed946a5132e9aaab4e"
+    },
+    {
+      "file": "config/id2pinyin.json",
+      "url": "https://huggingface.co/ShannonAI/ChineseBERT-base/resolve/aa8b6fa9c3427f77b0911b07ab35f2b1b8bf248b/config/id2pinyin.json",
+      "bytes": 1150405,
+      "sha256": "afc9f9a823da838c2c4bf31c05c37d6a3f7977785d3e3c5bd9ddde4154745f4a"
+    },
+    {
+      "file": "config/pinyin2tensor.json",
+      "url": "https://huggingface.co/ShannonAI/ChineseBERT-base/resolve/aa8b6fa9c3427f77b0911b07ab35f2b1b8bf248b/config/pinyin2tensor.json",
+      "bytes": 50573,
+      "sha256": "38083adb20dd4d21f39e3cd8f048f5237e39e0dc35e482229854b8bba3419d52"
+    },
+    {
+      "file": "pytorch_model.bin",
+      "url": "https://huggingface.co/ShannonAI/ChineseBERT-base/resolve/aa8b6fa9c3427f77b0911b07ab35f2b1b8bf248b/pytorch_model.bin",
+      "bytes": 591904556,
+      "sha256": "ef723c532668d328523cd663ea5eefec1c2eaf8e118458f086bc357115e0aad9"
+    }
+  ],
+  "remote_code_executed": false,
+  "glyph_note": "Use the pretrained glyph lookup tensor embedded in the checkpoint; no new fonts substituted.",
+  "code_reference": "https://github.com/ShannonAI/ChineseBert/tree/67f45cda50e75053ca3143bb8fadc3748cdfd13e"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "main_pages": 16,
+  "appendix_pages": 2,
+  "source_files": 21,
+  "references": 13,
+  "source_revision_manifest": "archive/report_build/problem_driven_revision/qa.json",
+  "baseline_evaluation": "results/couplet/direct_sft_report_comparison/comparison.json",
+  "grading_coverage": "archive/report_build/problem_driven_revision/评分覆盖与修改记录.md",
+  "models_unchanged": true,
+  "artifacts": {
+    "project_report.pdf": {
+      "bytes": 556970,
+      "sha256": "075cf8787717ea72905b9c28e9347640496e4881b1f4291e284805ee581e52c0"
+    },
+    "sample_outputs.pdf": {
+      "bytes": 199531,
+      "sha256": "42f794f846401aa221bd8ca77a73bd43b14fb1a79cc67ee26a888f4b8ac34364"
+    },
+    "latex_source.zip": {
+      "bytes": 37084,
+      "sha256": "6a7316bc9cde11e9bb87e5a6055f35ee23d17bb97173a5b313b6518290529bcb"
+    }
+  }
+}

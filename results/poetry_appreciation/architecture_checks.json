@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "old_vocab_logits_difference": 0.0,
+  "hidden_head_equivalence": 0.0,
+  "future_leak_difference": 0.0,
+  "cache_prefill_difference": 5.7220458984375e-06,
+  "cache_step_difference": 5.245208740234375e-06,
+  "response_only_loss_difference": 0.0,
+  "tied_embeddings": true,
+  "parameters": 9179904,
+  "benchmarks": [
+    {
+      "microbatch": 12,
+      "length": 512,
+      "seconds": 0.17823289998341352,
+      "peak_mib": 1133.22119140625
+    },
+    {
+      "microbatch": 6,
+      "length": 1024,
+      "seconds": 0.028755800012731925,
+      "peak_mib": 1133.22119140625
+    },
+    {
+      "microbatch": 4,
+      "length": 1535,
+      "seconds": 0.047358699986943975,
+      "peak_mib": 1317.20751953125
+    }
+  ],
+  "benchmark_weights_discarded": true,
+  "program_tone_prefix_not_a_neural_target": true,
+  "base_sha256": "7509f9e3a50fedc77c98b6dff208f47a5c69399323d532e8d0f6245fae9f47e7"
+}

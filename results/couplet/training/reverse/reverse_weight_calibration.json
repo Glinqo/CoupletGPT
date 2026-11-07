@@ -1,0 +1,98 @@
+{
+  "status": "complete",
+  "selection_data": "validation only",
+  "selected": {
+    "old_reverse": {
+      "weight": 0.1,
+      "chrf": 4.163490878730044
+    },
+    "reverse_adapter": {
+      "weight": 0.25,
+      "chrf": 4.285700533694289
+    },
+    "reverse_aligned_control": {
+      "weight": 0.1,
+      "chrf": 4.163490878730044
+    }
+  },
+  "grid_results": {
+    "old_reverse": [
+      {
+        "weight": 0,
+        "chrf": 4.1625372139421986
+      },
+      {
+        "weight": 0.1,
+        "chrf": 4.163490878730044
+      },
+      {
+        "weight": 0.25,
+        "chrf": 3.995923202904466
+      },
+      {
+        "weight": 0.5,
+        "chrf": 4.038278137254317
+      },
+      {
+        "weight": 0.75,
+        "chrf": 3.360631766394729
+      },
+      {
+        "weight": 1.0,
+        "chrf": 2.9394343711955107
+      }
+    ],
+    "reverse_adapter": [
+      {
+        "weight": 0,
+        "chrf": 4.1625372139421986
+      },
+      {
+        "weight": 0.1,
+        "chrf": 4.171503699242864
+      },
+      {
+        "weight": 0.25,
+        "chrf": 4.285700533694289
+      },
+      {
+        "weight": 0.5,
+        "chrf": 3.620522651848104
+      },
+      {
+        "weight": 0.75,
+        "chrf": 3.0900026975178823
+      },
+      {
+        "weight": 1.0,
+        "chrf": 3.1054474231140534
+      }
+    ],
+    "reverse_aligned_control": [
+      {
+        "weight": 0,
+        "chrf": 4.1625372139421986
+      },
+      {
+        "weight": 0.1,
+        "chrf": 4.163490878730044
+      },
+      {
+        "weight": 0.25,
+        "chrf": 4.072837708000481
+      },
+      {
+        "weight": 0.5,
+        "chrf": 3.5081110985141453
+      },
+      {
+        "weight": 0.75,
+        "chrf": 3.000675940934539
+      },
+      {
+        "weight": 1.0,
+        "chrf": 3.021853408109465
+      }
+    ]
+  }
+}

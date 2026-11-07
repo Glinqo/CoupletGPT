@@ -1,0 +1,35 @@
+{
+  "char_ce_scratch_minus_pretrained": {
+    "estimate": 0.2578360107696347,
+    "ci95": [
+      0.24540500444141916,
+      0.270169991946044
+    ],
+    "bootstrap_replicates": 5000,
+    "group": "unique upper",
+    "seed": 2029,
+    "note": "Conditional on fixed three trained models; not a training-seed confidence interval. Sentence chrF is not corpus chrF."
+  },
+  "raw_sentence_chrf_pretrained_minus_scratch": {
+    "estimate": 0.19371879716707302,
+    "ci95": [
+      0.08017510905441941,
+      0.3026712112919009
+    ],
+    "bootstrap_replicates": 5000,
+    "group": "unique upper",
+    "seed": 2029,
+    "note": "Conditional on fixed three trained models; not a training-seed confidence interval. Sentence chrF is not corpus chrF."
+  },
+  "length_constrained_sentence_chrf_pretrained_minus_scratch": {
+    "estimate": 0.19371879716707302,
+    "ci95": [
+      0.08017510905441941,
+      0.3026712112919009
+    ],
+    "bootstrap_replicates": 5000,
+    "group": "unique upper",
+    "seed": 2029,
+    "note": "Conditional on fixed three trained models; not a training-seed confidence interval. Sentence chrF is not corpus chrF."
+  }
+}

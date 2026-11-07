@@ -1,0 +1,18 @@
+{
+  "type": "unicode_codepoint",
+  "normalization": "NFC + OpenCC t2s",
+  "special_tokens": {
+    "<PAD>": 0,
+    "<UNK>": 1,
+    "<BOS>": 2,
+    "<EOS>": 3,
+    "<UP>": 4,
+    "<DOWN>": 5
+  },
+  "vocab_size": 13232,
+  "training_sources": [
+    "pretrain_train",
+    "couplet_train"
+  ],
+  "context_length": 128
+}

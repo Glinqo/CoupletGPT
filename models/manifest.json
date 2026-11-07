@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "name": "pretraining",
+      "path": "models/pretraining/model.pt",
+      "bytes": 32642961,
+      "sha256": "7509f9e3a50fedc77c98b6dff208f47a5c69399323d532e8d0f6245fae9f47e7"
+    },
+    {
+      "name": "couplet_forward",
+      "path": "models/couplet/forward.pt",
+      "bytes": 180973973,
+      "sha256": "2d175ed308a46725f6f1b320d7ac18a3726118b5cf7d3627ba8ee703cbdc1f70"
+    },
+    {
+      "name": "couplet_reverse",
+      "path": "models/couplet/reverse.pt",
+      "bytes": 180973909,
+      "sha256": "06dffbd2f5de7e764f7812ec4acbee2265101c7e0e75783d50b0b594e74c3149"
+    },
+    {
+      "name": "poetry_appreciation",
+      "path": "models/poetry_appreciation/model.pt",
+      "bytes": 36743761,
+      "sha256": "18c5b5d7d34c867d97c584ca3f35cdc816182bcf298e92550264af98f8de716f"
+    }
+  ],
+  "external_encoder": "models/external/ChineseBERT-base",
+  "checkpoints_unchanged": true
+}

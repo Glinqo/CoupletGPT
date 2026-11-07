@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "baseline_test": {
+    "response_ce": 7.519558967105873,
+    "rows": 1024,
+    "supervised_tokens": 285847,
+    "unknown_target_tokens": 1
+  },
+  "finetuned_test": {
+    "response_ce": 1.5715345974358388,
+    "rows": 1024,
+    "supervised_tokens": 285847,
+    "unknown_target_tokens": 1
+  },
+  "baseline_generation": {
+    "rows": 64,
+    "natural_EOS_rate": 0.734375,
+    "body_120_220_rate": 0.34375,
+    "severe_fourgram_repetition_rate": 0.671875,
+    "literal_source_bigram_anchor_rate": 0.078125,
+    "both_couplet_sides_literal_anchor_rate": null,
+    "median_body_characters": 156.5,
+    "chrf_reference_similarity_not_literary_score": 1.7932875425776884
+  },
+  "finetuned_generation": {
+    "rows": 64,
+    "natural_EOS_rate": 0.984375,
+    "body_120_220_rate": 0.234375,
+    "severe_fourgram_repetition_rate": 0.203125,
+    "literal_source_bigram_anchor_rate": 0.984375,
+    "both_couplet_sides_literal_anchor_rate": null,
+    "median_body_characters": 256.5,
+    "chrf_reference_similarity_not_literary_score": 20.74808529269882
+  },
+  "selected_step": 6236,
+  "selection": "lowest full-poetry validation response CE",
+  "no_couplet_adaptation": true,
+  "expert_quality_not_certified": true
+}

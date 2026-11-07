@@ -1,0 +1,61 @@
+[
+  {
+    "step": 0,
+    "validation": {
+      "response_ce": 7.529224168235028,
+      "rows": 1024,
+      "supervised_tokens": 279651,
+      "unknown_target_tokens": 0
+    }
+  },
+  {
+    "step": 1559,
+    "examples_seen": 199552,
+    "validation": {
+      "response_ce": 1.9445924597163908,
+      "rows": 1024,
+      "supervised_tokens": 279651,
+      "unknown_target_tokens": 0
+    }
+  },
+  {
+    "step": 3118,
+    "examples_seen": 399104,
+    "validation": {
+      "response_ce": 1.6815273014644536,
+      "rows": 1024,
+      "supervised_tokens": 279651,
+      "unknown_target_tokens": 0
+    }
+  },
+  {
+    "step": 4677,
+    "examples_seen": 598656,
+    "validation": {
+      "response_ce": 1.5890244858735476,
+      "rows": 1024,
+      "supervised_tokens": 279651,
+      "unknown_target_tokens": 0
+    }
+  },
+  {
+    "step": 6236,
+    "examples_seen": 798208,
+    "validation": {
+      "response_ce": 1.5560687264305832,
+      "rows": 1024,
+      "supervised_tokens": 279651,
+      "unknown_target_tokens": 0
+    }
+  },
+  {
+    "step": 6238,
+    "examples_seen": 798397,
+    "validation": {
+      "response_ce": 1.557359508533488,
+      "rows": 1024,
+      "supervised_tokens": 279651,
+      "unknown_target_tokens": 0
+    }
+  }
+]

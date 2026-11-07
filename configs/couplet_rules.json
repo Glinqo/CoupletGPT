@@ -1,0 +1,14 @@
+{
+  "forward": "models/couplet/forward.pt",
+  "reverse": "models/couplet/reverse.pt",
+  "reverse_weight": 0.25,
+  "mode": "rules",
+  "beam_size": 16,
+  "sampling_paths": 8,
+  "top_k": 20,
+  "temperature": 0.8,
+  "max_new_tokens": null,
+  "force_equal_length": true,
+  "filter_couplet_rules": true,
+  "shared_weights_between_modes": true
+}

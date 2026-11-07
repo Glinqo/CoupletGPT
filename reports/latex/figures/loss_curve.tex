@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+\begin{axis}[width=.94\linewidth,height=6.4cm,xmin=0,xmax=30.7,ymin=4,ymax=10,
+ xlabel={累计训练正文词元数（百万）},ylabel={平均交叉熵},
+ tick label style={font=\small},label style={font=\small},
+ grid=major,grid style={black!10},axis line style={black!60},
+ legend style={font=\small,at={(.98,.98)},anchor=north east,draw=none,fill=white},
+ xtick={0,5,10,15,20,25,30},ytick={4,5,6,7,8,9,10}]
+\addplot[color=modelblue,thick,mark=triangle*,mark size=2.2pt] table[x=million,y=ce,col sep=comma]{figures/full_validation.csv};
+\addlegendentry{完整验证集}
+\addplot[color=black!65,dashed,mark=o,mark size=1.4pt] table[x=million,y=ce,col sep=comma]{figures/train_probe.csv};
+\addlegendentry{固定训练探针}
+\end{axis}
+\end{tikzpicture}

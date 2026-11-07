@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "wrong_length_repeats_empty_UNK_and_punctuation_scoreable": true,
+  "no_rule_filter_in_scoring": true,
+  "forward_scores": [
+    -15.287609100341797,
+    -7.356774806976318,
+    -13.282112121582031
+  ],
+  "reverse_scores": [
+    -14.02099609375,
+    -10.820204734802246,
+    -11.021039009094238,
+    -5.187801361083984
+  ]
+}

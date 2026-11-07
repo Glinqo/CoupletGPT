@@ -1,0 +1,18 @@
+{
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "epochs": 3,
+  "batch": 256,
+  "pretrained_checkpoint_sha256": "7509f9e3a50fedc77c98b6dff208f47a5c69399323d532e8d0f6245fae9f47e7",
+  "dataset_tensor_sha256": {
+    "train": "8867fc0d186db42292d7b47d603626412e52f57c6feed7a51d4f39c2fbf0104a",
+    "validation": "93f8004b7d79877bc1e8d6feee5d830efbe9f5318d8e764f22a6af11b2315612",
+    "test": "616d1be3885a4d81a2d68811ed80551bd31336c18a936558b39893108440e32e"
+  },
+  "model_parameters": 8154624,
+  "selection": "validation CE only",
+  "started_at": "2026-11-04T14:49:12.481497+08:00"
+}

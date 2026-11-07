@@ -1,0 +1,32 @@
+{
+  "repository": "charlesix59/chinese_word_rhyme",
+  "commit": "ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/charlesix59/chinese_word_rhyme/ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18/README.md",
+      "sha256": "3e1c0861b7085f576c911d29d443e7ef1a1c7dc275b20fb010a842f6316372c3",
+      "bytes": 3921
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/charlesix59/chinese_word_rhyme/ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18/LICENSE",
+      "sha256": "e1464036d0f0ca738de9ebcb697b8faaf6dc2eafd193dc98555f23b409e87599",
+      "bytes": 1068
+    },
+    {
+      "path": "Pingshui_Rhyme.json",
+      "original_path": "data/Pingshui_Rhyme.json",
+      "url": "https://raw.githubusercontent.com/charlesix59/chinese_word_rhyme/ff0e9c13fb037c43e0eaa5dc929c0fe4fa2ffb18/data/Pingshui_Rhyme.json",
+      "bytes": 206515,
+      "sha256": "fd11164ca1b848eb6b777688d5d6628ce772d72d0a25a0efd12d6b58459c6e2e"
+    }
+  ]
+}

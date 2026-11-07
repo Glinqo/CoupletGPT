@@ -1,0 +1,13 @@
+# Exact versions in the verified environment. Install the appropriate PyTorch/CUDA build first.
+torch==2.14.1+cu130
+numpy==2.4.6
+transformers==4.57.6
+tokenizers==0.22.2
+safetensors==0.8.0
+OpenCC==1.4.2
+pypinyin==0.55.0
+jieba==0.42.1
+sacrebleu==2.6.0
+requests==2.34.2
+pyahocorasick==2.3.1
+ijson==3.6.0

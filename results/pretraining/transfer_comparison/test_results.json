@@ -1,0 +1,648 @@
+{
+  "status": "complete",
+  "row_count": 2246,
+  "unique_uppers": 2233,
+  "runs": [
+    {
+      "condition": "pretrained",
+      "seed": 2026,
+      "selected_epoch": 3,
+      "teacher_forced": {
+        "ce": 3.527023555319815,
+        "ppl": 34.022550518941316,
+        "char_ce": 4.057683717782858,
+        "char_ppl": 57.84018161397218,
+        "teacher_forced_char_accuracy": 0.2558949624866024,
+        "valid_tokens": 17174,
+        "characters": 14928
+      },
+      "generation": {
+        "raw": {
+          "unique_uppers": 2233,
+          "bleu": 1.5661635478364957,
+          "chrf": 2.707725763917329,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.017759580321156675,
+          "triple_repetition": 0.0022391401701746527,
+          "natural_eos_rate": 1.0,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.071820201888322,
+              "chrf": 3.0600676818950934,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.01979695431472081,
+              "triple_repetition": 0.0,
+              "natural_eos_rate": 1.0
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.6213475735845195,
+              "chrf": 2.728557618443426,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.017323079313291384,
+              "triple_repetition": 0.0027188689505165853,
+              "natural_eos_rate": 1.0
+            }
+          }
+        },
+        "length_constrained": {
+          "unique_uppers": 2233,
+          "bleu": 1.5661635478364957,
+          "chrf": 2.707725763917329,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.017759580321156675,
+          "triple_repetition": 0.0022391401701746527,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.071820201888322,
+              "chrf": 3.0600676818950934,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.01979695431472081,
+              "triple_repetition": 0.0
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.6213475735845195,
+              "chrf": 2.728557618443426,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.017323079313291384,
+              "triple_repetition": 0.0027188689505165853
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "scratch",
+      "seed": 2026,
+      "selected_epoch": 3,
+      "teacher_forced": {
+        "ce": 3.7524158748325958,
+        "ppl": 42.62393179801754,
+        "char_ce": 4.316987555893288,
+        "char_ppl": 74.96246757112905,
+        "teacher_forced_char_accuracy": 0.2302384780278671,
+        "valid_tokens": 17174,
+        "characters": 14928
+      },
+      "generation": {
+        "raw": {
+          "unique_uppers": 2233,
+          "bleu": 1.4208002401750963,
+          "chrf": 2.5571148218901882,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.014560808649478599,
+          "triple_repetition": 0.0035826242722794446,
+          "natural_eos_rate": 1.0,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.2010189519575853,
+              "chrf": 2.9238578680203045,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.017258883248730966,
+              "triple_repetition": 0.0025380710659898475,
+              "natural_eos_rate": 1.0
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.4425619605155846,
+              "chrf": 2.5730210518138743,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.013982754602656721,
+              "triple_repetition": 0.0038064165307232192,
+              "natural_eos_rate": 1.0
+            }
+          }
+        },
+        "length_constrained": {
+          "unique_uppers": 2233,
+          "bleu": 1.4208002401750963,
+          "chrf": 2.5571148218901882,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.014560808649478599,
+          "triple_repetition": 0.0035826242722794446,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.2010189519575853,
+              "chrf": 2.9238578680203045,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.017258883248730966,
+              "triple_repetition": 0.0025380710659898475
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.4425619605155846,
+              "chrf": 2.5730210518138743,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.013982754602656721,
+              "triple_repetition": 0.0038064165307232192
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "pretrained",
+      "seed": 2027,
+      "selected_epoch": 3,
+      "teacher_forced": {
+        "ce": 3.521052132083746,
+        "ppl": 33.81999285090295,
+        "char_ce": 4.050813795541516,
+        "char_ppl": 57.444185851352195,
+        "teacher_forced_char_accuracy": 0.25569399785637725,
+        "valid_tokens": 17174,
+        "characters": 14928
+      },
+      "generation": {
+        "raw": {
+          "unique_uppers": 2233,
+          "bleu": 1.6631770680255495,
+          "chrf": 2.71590606738174,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.018476105175612562,
+          "triple_repetition": 0.0008956560680698612,
+          "natural_eos_rate": 1.0,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.236594351122434,
+              "chrf": 3.011844331641286,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.018781725888324875,
+              "triple_repetition": 0.0,
+              "natural_eos_rate": 1.0
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.7079529039344086,
+              "chrf": 2.743015096196173,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.018410626893498018,
+              "triple_repetition": 0.001087547580206634,
+              "natural_eos_rate": 1.0
+            }
+          }
+        },
+        "length_constrained": {
+          "unique_uppers": 2233,
+          "bleu": 1.6631770680255495,
+          "chrf": 2.71590606738174,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.018476105175612562,
+          "triple_repetition": 0.0008956560680698612,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.236594351122434,
+              "chrf": 3.011844331641286,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.018781725888324875,
+              "triple_repetition": 0.0
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.7079529039344086,
+              "chrf": 2.743015096196173,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.018410626893498018,
+              "triple_repetition": 0.001087547580206634
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "scratch",
+      "seed": 2027,
+      "selected_epoch": 3,
+      "teacher_forced": {
+        "ce": 3.743011414192602,
+        "ppl": 42.224955727057434,
+        "char_ce": 4.306168076820823,
+        "char_ppl": 74.1557845363826,
+        "teacher_forced_char_accuracy": 0.2289657020364416,
+        "valid_tokens": 17174,
+        "characters": 14928
+      },
+      "generation": {
+        "raw": {
+          "unique_uppers": 2233,
+          "bleu": 1.14856923707264,
+          "chrf": 2.463731596732154,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.013191734374000383,
+          "triple_repetition": 0.0026869682042095834,
+          "natural_eos_rate": 1.0,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.0759805200100383,
+              "chrf": 2.6632825719120135,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.016751269035532996,
+              "triple_repetition": 0.005076142131979695,
+              "natural_eos_rate": 1.0
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.158254468322999,
+              "chrf": 2.5003668315250693,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.01242911520236153,
+              "triple_repetition": 0.002175095160413268,
+              "natural_eos_rate": 1.0
+            }
+          }
+        },
+        "length_constrained": {
+          "unique_uppers": 2233,
+          "bleu": 1.14856923707264,
+          "chrf": 2.463731596732154,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.013191734374000383,
+          "triple_repetition": 0.0026869682042095834,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.0759805200100383,
+              "chrf": 2.6632825719120135,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.016751269035532996,
+              "triple_repetition": 0.005076142131979695
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.158254468322999,
+              "chrf": 2.5003668315250693,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.01242911520236153,
+              "triple_repetition": 0.002175095160413268
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "pretrained",
+      "seed": 2028,
+      "selected_epoch": 3,
+      "teacher_forced": {
+        "ce": 3.522938727555098,
+        "ppl": 33.88385772090134,
+        "char_ce": 4.052984272424303,
+        "char_ppl": 57.569002535656374,
+        "teacher_forced_char_accuracy": 0.2572347266881029,
+        "valid_tokens": 17174,
+        "characters": 14928
+      },
+      "generation": {
+        "raw": {
+          "unique_uppers": 2233,
+          "bleu": 1.5865159718105806,
+          "chrf": 2.7399338386214116,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.01823299852856503,
+          "triple_repetition": 0.0022391401701746527,
+          "natural_eos_rate": 1.0,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.2242495997967147,
+              "chrf": 3.0067681895093066,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.02284263959390863,
+              "triple_repetition": 0.0025380710659898475,
+              "natural_eos_rate": 1.0
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.6278244335275935,
+              "chrf": 2.772706871401814,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.017245397343276625,
+              "triple_repetition": 0.002175095160413268,
+              "natural_eos_rate": 1.0
+            }
+          }
+        },
+        "length_constrained": {
+          "unique_uppers": 2233,
+          "bleu": 1.5865159718105806,
+          "chrf": 2.7399338386214116,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.01823299852856503,
+          "triple_repetition": 0.0022391401701746527,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.2242495997967147,
+              "chrf": 3.0067681895093066,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.02284263959390863,
+              "triple_repetition": 0.0025380710659898475
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.6278244335275935,
+              "chrf": 2.772706871401814,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.017245397343276625,
+              "triple_repetition": 0.002175095160413268
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "scratch",
+      "seed": 2028,
+      "selected_epoch": 3,
+      "teacher_forced": {
+        "ce": 3.7480561436437347,
+        "ppl": 42.438507407116575,
+        "char_ce": 4.31197181366392,
+        "char_ppl": 74.58741652288921,
+        "teacher_forced_char_accuracy": 0.22909967845659163,
+        "valid_tokens": 17174,
+        "characters": 14928
+      },
+      "generation": {
+        "raw": {
+          "unique_uppers": 2233,
+          "bleu": 1.3947594140321442,
+          "chrf": 2.5751500974134154,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.014240931482310792,
+          "triple_repetition": 0.0017913121361397223,
+          "natural_eos_rate": 1.0,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.1093714737508187,
+              "chrf": 2.8409475465313023,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.019796954314720814,
+              "triple_repetition": 0.0025380710659898475,
+              "natural_eos_rate": 1.0
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.4267419472131744,
+              "chrf": 2.604611719619877,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.013050570962479607,
+              "triple_repetition": 0.0016313213703099511,
+              "natural_eos_rate": 1.0
+            }
+          }
+        },
+        "length_constrained": {
+          "unique_uppers": 2233,
+          "bleu": 1.3947594140321442,
+          "chrf": 2.5751500974134154,
+          "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+          "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+          "length_match": 1.0,
+          "pure_han_length": 1.0,
+          "exact_reference_match": 0.0,
+          "copy_upper": 0.0,
+          "position_copy_fraction": 0.014240931482310792,
+          "triple_repetition": 0.0017913121361397223,
+          "by_length": {
+            "5": {
+              "unique_uppers": 394,
+              "bleu": 1.1093714737508187,
+              "chrf": 2.8409475465313023,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.019796954314720814,
+              "triple_repetition": 0.0025380710659898475
+            },
+            "7": {
+              "unique_uppers": 1839,
+              "bleu": 1.4267419472131744,
+              "chrf": 2.604611719619877,
+              "bleu_signature": "nrefs:var|case:mixed|eff:no|tok:char|smooth:exp|version:2.6.0",
+              "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+              "length_match": 1.0,
+              "pure_han_length": 1.0,
+              "exact_reference_match": 0.0,
+              "copy_upper": 0.0,
+              "position_copy_fraction": 0.013050570962479607,
+              "triple_repetition": 0.0016313213703099511
+            }
+          }
+        }
+      }
+    }
+  ],
+  "bootstrap": {
+    "char_ce_scratch_minus_pretrained": {
+      "estimate": 0.2578360107696347,
+      "ci95": [
+        0.24540500444141916,
+        0.270169991946044
+      ],
+      "bootstrap_replicates": 5000,
+      "group": "unique upper",
+      "seed": 2029,
+      "note": "Conditional on fixed three trained models; not a training-seed confidence interval. Sentence chrF is not corpus chrF."
+    },
+    "raw_sentence_chrf_pretrained_minus_scratch": {
+      "estimate": 0.19371879716707302,
+      "ci95": [
+        0.08017510905441941,
+        0.3026712112919009
+      ],
+      "bootstrap_replicates": 5000,
+      "group": "unique upper",
+      "seed": 2029,
+      "note": "Conditional on fixed three trained models; not a training-seed confidence interval. Sentence chrF is not corpus chrF."
+    },
+    "length_constrained_sentence_chrf_pretrained_minus_scratch": {
+      "estimate": 0.19371879716707302,
+      "ci95": [
+        0.08017510905441941,
+        0.3026712112919009
+      ],
+      "bootstrap_replicates": 5000,
+      "group": "unique upper",
+      "seed": 2029,
+      "note": "Conditional on fixed three trained models; not a training-seed confidence interval. Sentence chrF is not corpus chrF."
+    }
+  }
+}

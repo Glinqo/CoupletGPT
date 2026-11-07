@@ -1,0 +1,52 @@
+{
+  "status": "complete",
+  "stop_reason": "budget_reached",
+  "body_tokens": 30004916,
+  "valid_tokens": 30329796,
+  "steps": 3337,
+  "best_checkpoint_body_tokens": 30004916,
+  "best_validation": {
+    "tang": {
+      "ce": 4.519299713650456,
+      "ppl": 91.77130927536825,
+      "valid_tokens": 63794,
+      "windows": 1090
+    },
+    "song": {
+      "ce": 4.722985539413113,
+      "ppl": 112.50363580772206,
+      "valid_tokens": 320666,
+      "windows": 5572
+    },
+    "ci": {
+      "ce": 4.634852425855815,
+      "ppl": 103.0127148602264,
+      "valid_tokens": 32323,
+      "windows": 428
+    },
+    "classical": {
+      "ce": 5.137225290569156,
+      "ppl": 170.24273823298023,
+      "valid_tokens": 220537,
+      "windows": 1748
+    },
+    "weighted_ce": 4.777338405675399,
+    "weighted_ppl": 118.78776408129465
+  },
+  "source_body_tokens": {
+    "tang": 9005970,
+    "song": 9032397,
+    "ci": 2978087,
+    "classical": 8988462
+  },
+  "source_body_ratios": {
+    "tang": 0.30014981545024155,
+    "song": 0.3010305711237452,
+    "ci": 0.09925330235885346,
+    "classical": 0.2995663110671598
+  },
+  "elapsed_seconds_this_invocation": 366.47972349997144,
+  "parameter_count": 8154624,
+  "peak_allocated_mib": 914.95458984375,
+  "finished_at": "2026-11-04T13:34:09.029527+08:00"
+}

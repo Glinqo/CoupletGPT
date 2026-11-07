@@ -1,0 +1,52 @@
+% Original vector drawing of the implemented Pre-LN model; not a copied paper figure.
+\begin{tikzpicture}[x=1cm,y=1cm,
+ font=\fontsize{9.2}{11}\selectfont,
+ layer/.style={draw=black!70,rounded corners=1pt,line width=.55pt,minimum height=.46cm,align=center,inner sep=3pt},
+ tok/.style={draw=black!65,fill=white,minimum width=.58cm,minimum height=.38cm,inner sep=1pt},
+ ar/.style={-{Stealth[length=1.8mm]},line width=.6pt},
+ plus/.style={circle,draw=black!75,fill=white,inner sep=0pt,minimum size=.38cm}]
+% (a) Token-wise decoder stack
+\node[anchor=west,font=\small\bfseries] at (0,9.3) {(a) 自回归GPT主干};
+\foreach \x/\t in {1/x_1,2/x_2,3/\cdots,4/x_T}{\node[tok] at (\x,.15) {$\t$};}
+\node[layer,fill=green!12,minimum width=3.8cm] (emb) at (2.5,1.05) {Token Embedding $E$};
+\foreach \x in {1,2,4}{\draw[ar] (\x,.36)--(\x,.81);}
+\node[plus] (addp) at (2.5,1.92) {$+$};
+\draw[ar] (emb)--(addp);
+\node[layer,fill=green!12,minimum width=1.15cm] (pos) at (5.18,1.92) {$P_{1:T}$};
+\draw[ar] (pos)--(addp);
+% Embedding tensor, shown as a grid rather than a prose process box.
+\foreach \i in {0,...,5}{\foreach \j in {0,...,2}{
+ \draw[fill=modelblue!35,draw=white,line width=.35pt] (1.51+.33*\i,2.43+.10*\j) rectangle ++(.32,.09);
+}}
+\node[anchor=west] at (3.75,2.58) {$H^{(0)}\in\mathbb R^{T\times256}$};
+\draw[ar] (addp)--(2.5,2.41);
+\draw[rounded corners=3pt,fill=modelblue!4,draw=black!60] (.45,3.0) rectangle (4.55,5.6);
+\node[layer,fill=modelblue!16,minimum width=3.5cm] at (2.5,3.5) {Pre-LN Block 1};
+\node at (2.5,4.28) {$\vdots$};
+\node[layer,fill=modelblue!16,minimum width=3.5cm] at (2.5,5.08) {Pre-LN Block 6};
+\draw[ar] (2.5,2.75)--(2.5,3.26);
+\draw[ar] (2.5,3.75)--(2.5,4.0);\draw[ar] (2.5,4.54)--(2.5,4.84);
+\node[anchor=west] at (4.68,4.28) {$6\times$};
+\node[layer,fill=black!6,minimum width=3.8cm] (norm) at (2.5,6.12) {LayerNorm};
+\node[layer,fill=green!12,minimum width=3.8cm] (head) at (2.5,6.97) {Linear $E^{\mathsf T}$};
+\node[layer,fill=orange!12,minimum width=3.8cm] (soft) at (2.5,7.80) {Softmax};
+\draw[ar] (2.5,5.33)--(norm);\draw[ar] (norm)--(head);\draw[ar] (head)--(soft);
+\draw[ar] (soft)--(2.5,8.35);\node[anchor=south] at (2.5,8.35) {$p(x_{t+1}\mid x_{\le t})$};
+\draw[ar,dashed,draw=green!40!black] (emb.west)--(.05,1.05)--(.05,6.97)--(head.west);
+\node[rotate=90,fill=white,inner sep=2pt,text=green!35!black] at (.05,6.02) {weight tying};
+% (b) Exact Pre-LN residual block, expanded as a neural module.
+\node[anchor=west,font=\small\bfseries] at (7.1,9.3) {(b) Pre-LN Block内部结构};
+\draw[rounded corners=3pt,draw=black!55,fill=black!2] (7.25,.75) rectangle (12.75,8.15);
+\node (hin) at (9.5,.35) {$H^{(\ell-1)}$};
+\node[layer,fill=orange!12,minimum width=3.1cm] (ln1) at (9.5,1.45) {LayerNorm};
+\node[layer,fill=modelblue!18,minimum width=3.1cm,minimum height=.85cm] (att) at (9.5,2.63) {Masked Multi-Head\\Self-Attention};
+\node[plus] (p1) at (9.5,3.72) {$+$};
+\node[layer,fill=orange!12,minimum width=3.1cm] (ln2) at (9.5,4.68) {LayerNorm};
+\node[layer,fill=purple!11,minimum width=3.1cm,minimum height=.8cm] (ffn) at (9.5,5.83) {Feed-Forward\\$256\to1024\to256$};
+\node[plus] (p2) at (9.5,7.0) {$+$};
+\node (hout) at (9.5,8.42) {$H^{(\ell)}$};
+\draw[ar] (hin)--(ln1);\draw[ar] (ln1)--(att);\draw[ar] (att)--(p1);\draw[ar] (p1)--(ln2);\draw[ar] (ln2)--(ffn);\draw[ar] (ffn)--(p2);\draw[ar] (p2)--(hout);
+\draw[ar] (9.5,.92)--(12.1,.92)|-(p1.east);
+\draw[ar] (9.5,4.18)--(12.1,4.18)|-(p2.east);
+\node[align=center] at (9.5,-.25) {4 heads\quad $d_k=d_v=64$};
+\end{tikzpicture}

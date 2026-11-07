@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "probe_uppers_disjoint": true,
+  "sources_sha256_verified": true,
+  "SQLite_quick_check": "ok",
+  "previous_v9_ids_preserved": true,
+  "read_only_only_terms_not_in_new_activation": true,
+  "long_phrase_match_test": "更上一层楼",
+  "model_match_max_length": 8,
+  "query_examples": [
+    {
+      "query": "春风",
+      "found": true,
+      "has_definition": true,
+      "dictionary_or_pinyin_supported": true,
+      "read_only_dictionary_supported": true
+    },
+    {
+      "query": "明月",
+      "found": true,
+      "has_definition": true,
+      "dictionary_or_pinyin_supported": true,
+      "read_only_dictionary_supported": true
+    },
+    {
+      "query": "喉吻",
+      "found": true,
+      "has_definition": true,
+      "dictionary_or_pinyin_supported": true,
+      "read_only_dictionary_supported": true
+    },
+    {
+      "query": "奎璧",
+      "found": false,
+      "has_definition": null,
+      "dictionary_or_pinyin_supported": null,
+      "read_only_dictionary_supported": null
+    },
+    {
+      "query": "无遮会",
+      "found": true,
+      "has_definition": true,
+      "dictionary_or_pinyin_supported": true,
+      "read_only_dictionary_supported": false
+    },
+    {
+      "query": "近水楼台先得月",
+      "found": true,
+      "has_definition": true,
+      "dictionary_or_pinyin_supported": true,
+      "read_only_dictionary_supported": false
+    }
+  ],
+  "unknown_query_not_fabricated": true,
+  "trained_model_not_modified": true
+}

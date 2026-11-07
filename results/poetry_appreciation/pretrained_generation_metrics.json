@@ -1,0 +1,10 @@
+{
+  "rows": 64,
+  "natural_EOS_rate": 0.734375,
+  "body_120_220_rate": 0.34375,
+  "severe_fourgram_repetition_rate": 0.671875,
+  "literal_source_bigram_anchor_rate": 0.078125,
+  "both_couplet_sides_literal_anchor_rate": null,
+  "median_body_characters": 156.5,
+  "chrf_reference_similarity_not_literary_score": 1.7932875425776884
+}

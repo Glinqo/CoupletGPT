@@ -1,0 +1,58 @@
+\documentclass[UTF8,a4paper,zihao=-4,fontset=fandol]{ctexart}
+\usepackage[top=24mm,bottom=24mm,left=25mm,right=25mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,bm,booktabs,tabularx,array,longtable,multirow}
+\usepackage{graphicx,xcolor,tikz,pgfplots,caption,subcaption,float,placeins}
+\usepackage{enumitem,fancyhdr,lastpage,xurl,needspace}
+\usepackage[super,square,sort&compress]{natbib}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,patterns}
+\pgfplotsset{compat=1.18}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,pdftitle={基于小型 GPT 的中文对联生成研究报告},pdfauthor={}}
+\definecolor{modelblue}{HTML}{245B80}
+\definecolor{pale}{HTML}{EDF3F7}
+\definecolor{ruleorange}{HTML}{A86120}
+\definecolor{paleorange}{HTML}{FCF4E9}
+\definecolor{graytext}{HTML}{4D4D4D}
+\setmainfont{TeX Gyre Termes}
+\IfFontExistsTF{SimSun}{
+ \xeCJKsetup{AutoFallBack=true}
+ \setCJKfallbackfamilyfont{\CJKrmdefault}[AutoFakeBold=2]{SimSun}
+ \setCJKfallbackfamilyfont{\CJKsfdefault}[AutoFakeBold=2]{SimSun}
+}{}
+\IfFontExistsTF{SimSun-ExtB}{\newCJKfontfamily\ExtB[AutoFakeBold=2]{SimSun-ExtB}}{\newcommand{\ExtB}{}}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{2pt}
+\linespread{1.23}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.28}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\captionsetup{font=small,labelfont=bf,labelsep=quad,skip=7pt}
+
+\ctexset{
+ section={format=\heiti\fontsize{16}{21}\selectfont,beforeskip=20pt,afterskip=11pt},
+ subsection={format=\heiti\fontsize{12.5}{17}\selectfont,beforeskip=14pt,afterskip=7pt},
+ subsubsection={format=\heiti\normalsize,beforeskip=9pt,afterskip=5pt}}
+\renewcommand{\bibsection}{\section*{参考文献}\addcontentsline{toc}{section}{参考文献}}
+\renewcommand{\bibfont}{\small}
+\setlength{\bibsep}{5pt}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\topfraction}{0.88}
+\renewcommand{\bottomfraction}{0.75}
+\renewcommand{\floatpagefraction}{0.78}
+\setlength{\textfloatsep}{13pt plus 2pt minus 2pt}
+\raggedbottom
+\setcounter{secnumdepth}{2}
+\setlist{nosep,leftmargin=2em}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small 中文对联生成研究报告}
+\fancyhead[R]{\small CoupletGPT}
+\fancyfoot[C]{\small \thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\emergencystretch=1.5em
+\widowpenalty=10000\clubpenalty=10000
+\makeatletter\setlength{\@fptop}{0pt}\makeatother
+\tikzset{box/.style={draw=modelblue!80,line width=.7pt,rounded corners=1.8pt,fill=pale,align=center,font=\small,inner sep=5pt},frozen/.style={box,draw=graytext,dashed,fill=black!3},rule/.style={box,draw=ruleorange,fill=paleorange},arrow/.style={-{Stealth[length=2.0mm]},line width=.7pt,draw=graytext},annot/.style={font=\footnotesize,text=graytext,align=center}}
+\newcommand{\casequote}[1]{\par\begingroup\small\setlength{\parindent}{0pt}#1\par\endgroup}
+\newcommand{\modeltext}[2]{\par\noindent\textbf{#1}\quad #2\par}

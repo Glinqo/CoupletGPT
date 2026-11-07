@@ -1,0 +1,23 @@
+{
+  "seed": 2026,
+  "context_length": 128,
+  "position_encoding": "learned_absolute",
+  "position_reset": "per_sample_only",
+  "pretrain_stride": 128,
+  "pretrain_document_isolation": true,
+  "pretrain_body_token_weights": {
+    "tang": 0.3,
+    "song": 0.3,
+    "ci": 0.1,
+    "classical": 0.3
+  },
+  "special_ids": {
+    "<PAD>": 0,
+    "<UNK>": 1,
+    "<BOS>": 2,
+    "<EOS>": 3,
+    "<UP>": 4,
+    "<DOWN>": 5
+  },
+  "vocab_size": 13232
+}

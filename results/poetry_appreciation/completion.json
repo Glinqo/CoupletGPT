@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "date": "2026-11-06",
+  "direct_full_poetry_only": true,
+  "curated_couplet_training_examples": 0,
+  "model_sha256": "18c5b5d7d34c867d97c584ca3f35cdc816182bcf298e92550264af98f8de716f",
+  "evaluation_sha256": "57bacb6843fcf8ed4f10121249b2007721648a8515b3b6ac3f4b26980dc94c33",
+  "program_tone_prefix_not_model_output": true,
+  "report": "docs\\大规模古诗文赏析直接微调报告-v4.md",
+  "training_examples": 798397,
+  "supervised_tokens": 221304997,
+  "release_checks_sha256": "124fec9652514ca04fca333431854fb332912f522824fe2a0205e5b76b6cfa6b"
+}

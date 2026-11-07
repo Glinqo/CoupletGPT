@@ -1,0 +1,76 @@
+{
+  "status": "complete",
+  "epochs": 1,
+  "steps": 6238,
+  "examples_seen": 798397,
+  "supervised_tokens": 221304997,
+  "best_validation_ce": 1.5560687264305832,
+  "seconds": 1930.1945450000057,
+  "history": [
+    {
+      "step": 0,
+      "validation": {
+        "response_ce": 7.529224168235028,
+        "rows": 1024,
+        "supervised_tokens": 279651,
+        "unknown_target_tokens": 0
+      }
+    },
+    {
+      "step": 1559,
+      "examples_seen": 199552,
+      "validation": {
+        "response_ce": 1.9445924597163908,
+        "rows": 1024,
+        "supervised_tokens": 279651,
+        "unknown_target_tokens": 0
+      }
+    },
+    {
+      "step": 3118,
+      "examples_seen": 399104,
+      "validation": {
+        "response_ce": 1.6815273014644536,
+        "rows": 1024,
+        "supervised_tokens": 279651,
+        "unknown_target_tokens": 0
+      }
+    },
+    {
+      "step": 4677,
+      "examples_seen": 598656,
+      "validation": {
+        "response_ce": 1.5890244858735476,
+        "rows": 1024,
+        "supervised_tokens": 279651,
+        "unknown_target_tokens": 0
+      }
+    },
+    {
+      "step": 6236,
+      "examples_seen": 798208,
+      "validation": {
+        "response_ce": 1.5560687264305832,
+        "rows": 1024,
+        "supervised_tokens": 279651,
+        "unknown_target_tokens": 0
+      }
+    },
+    {
+      "step": 6238,
+      "examples_seen": 798397,
+      "validation": {
+        "response_ce": 1.557359508533488,
+        "rows": 1024,
+        "supervised_tokens": 279651,
+        "unknown_target_tokens": 0
+      }
+    }
+  ],
+  "parameters": 9179904,
+  "peak_allocated_mib": 1524.52490234375,
+  "effective_batch": 128,
+  "adaptive_microbatch": "min(16, floor(6144 / batch maximum length))",
+  "max_lr": 0.00015,
+  "curated_couplet_training_examples": 0
+}

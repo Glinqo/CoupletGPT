@@ -1,0 +1,105 @@
+{
+  "runs\\optimization_v4\\knowledge_special\\sources\\ci.json": {
+    "rows": 264434,
+    "accepted": 262559,
+    "filtered": 1875
+  },
+  "runs\\optimization_v4\\knowledge_special\\sources\\idiom.json": {
+    "rows": 30895,
+    "accepted": 30345,
+    "filtered": 550
+  },
+  "runs\\lexicon_expansion_v10\\sources\\mapull\\word\\word.json": {
+    "rows": 320349,
+    "filtered": 2045,
+    "accepted": 318304
+  },
+  "runs\\lexicon_expansion_v10\\sources\\mapull\\idiom\\idiom.json": {
+    "rows": 49639,
+    "accepted": 48093,
+    "filtered": 1546
+  },
+  "C:\\compiler\\python311\\Lib\\site-packages\\jieba\\dict.txt": {
+    "rows": 349046,
+    "filtered": 128,
+    "accepted": 348918
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\jieba\\extra_dict\\dict.txt.big": {
+    "rows": 584429,
+    "filtered": 211,
+    "accepted": 584218
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\THUOCL\\data\\THUOCL_animal.txt": {
+    "rows": 17287,
+    "accepted": 17278,
+    "filtered": 9
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\THUOCL\\data\\THUOCL_caijing.txt": {
+    "rows": 3830,
+    "accepted": 3822,
+    "filtered": 8
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\THUOCL\\data\\THUOCL_car.txt": {
+    "rows": 1752,
+    "accepted": 1750,
+    "filtered": 2
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\THUOCL\\data\\THUOCL_chengyu.txt": {
+    "rows": 8519,
+    "accepted": 8519
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\THUOCL\\data\\THUOCL_diming.txt": {
+    "rows": 44804,
+    "filtered": 9,
+    "accepted": 44795
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\THUOCL\\data\\THUOCL_food.txt": {
+    "rows": 8974,
+    "accepted": 8971,
+    "filtered": 3
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\THUOCL\\data\\THUOCL_IT.txt": {
+    "rows": 15992,
+    "accepted": 12855,
+    "filtered": 3137
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\THUOCL\\data\\THUOCL_law.txt": {
+    "rows": 9896,
+    "accepted": 8424,
+    "filtered": 1472
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\THUOCL\\data\\THUOCL_lishimingren.txt": {
+    "rows": 13658,
+    "accepted": 13658
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\THUOCL\\data\\THUOCL_medical.txt": {
+    "rows": 18749,
+    "accepted": 18745,
+    "filtered": 4
+  },
+  "D:\\E盘\\课件\\大三上\\具身智能\\作业\\第三次作业\\runs\\lexicon_expansion_v9_open\\sources\\THUOCL\\data\\THUOCL_poem.txt": {
+    "rows": 13703,
+    "accepted": 13683,
+    "filtered": 20
+  },
+  "runs\\lexicon_expansion_v9_open\\sources\\phrase-pinyin-data\\large_pinyin.txt": {
+    "rows": 413403,
+    "accepted": 413376,
+    "filtered": 27
+  },
+  "runs\\lexicon_expansion_v10\\sources\\iDvel\\cn_dicts\\base.dict.yaml": {
+    "rows": 543320,
+    "accepted": 541416,
+    "filtered": 1904
+  },
+  "runs\\lexicon_expansion_v10\\sources\\iDvel\\cn_dicts\\ext.dict.yaml": {
+    "rows": 339209,
+    "accepted": 333924,
+    "filtered": 5285
+  },
+  "runs\\lexicon_expansion_v10\\sources\\iDvel\\cn_dicts\\tencent.dict.yaml": {
+    "rows": 981574,
+    "filtered": 171,
+    "accepted": 981403
+  }
+}

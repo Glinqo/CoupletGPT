@@ -1,0 +1,109 @@
+\section{对联生成的结构调整与微调实验}
+
+预训练迁移对照表明，古典语料能够改善对联监督学习的起点，但初始模型仍存在词组组织和形式对应错误。本节从这些实际问题出发介绍最终方法，随后比较原框架直接微调、增强模型无规则解码和增强模型规则约束解码，并结合最后一轮消融讨论各设计的作用。
+
+\Needspace{11\baselineskip}
+\subsection{方法与设计依据}
+
+\textbf{任务组织与改进动机。}直接微调保留原始6层字符级GPT，将输入组织为“BOS、UP、上联、DOWN、下联、EOS”，仅监督下联与EOS。该模型已能形成下联体裁，但在相同输入上生成“且舒敞胸襟／且放放胸怀”“诗歌伴雨吟／墨韵伴风吟”，分别出现无依据重复和同位照用；多字词及其对应关系没有得到显式表示。句法增强对联研究通过词性与依存关系刻画词语间联系\cite{song}，提示应在逐字预测之外引入更明确的对应信息。本文最终采用词汇融合与位置连接，模型结构见图~\ref{fig:lexical}。
+
+\textbf{词汇表示与注意力融合。}针对字符表示中缺少整词信息的问题，本文借鉴LEBERT的字符到词注意力，将外部词汇信息注入Transformer中间层\cite{lebert}。词库整合\href{https://github.com/fxsjy/jieba}{jieba}、\href{https://github.com/thunlp/THUOCL}{THUOCL}、\href{https://github.com/mozillazg/phrase-pinyin-data}{词语拼音表}、\href{https://github.com/mapull/chinese-dictionary}{mapull汉语词典}、\href{https://github.com/iDvel/rime-ice}{rime-ice}及\href{https://github.com/thunlp/OpenHowNet}{OpenHowNet}等资源，规范化去重后选取训练中出现的202,585条候选，每字保留至多8个重叠匹配，最长8字。保留重叠跨度使模型能够在多种候选中学习选择。
+
+词向量采用\href{https://huggingface.co/ShannonAI/ChineseBERT-base}{ChineseBERT}的条件上下文特征。该模型融合字符、字形和拼音信息\cite{chinesebert}，为词语提供随语境变化的表示。实验冻结其参数，以降低任务适配的更新规模；对已知条件句编码后，对词跨度均值池化，经$P_c:768\to128$投影并加上可训练词条残差$r_w$，再映射至GPT的256维空间。以首层GPT字符状态$h_i$为查询，融合计算为
+\begin{align}
+ v_w&=\operatorname{MLP}\!\left(P_c\operatorname{Mean}(H_{s_w:e_w})+r_w\right),\label{eq:word}\\
+ \alpha_{iw}&=\operatorname{softmax}_{w\in C(i)}(h_i^{\mathsf T}Av_w),\qquad
+ c_i=\sum_{w\in C(i)}\alpha_{iw}v_w.\label{eq:lexical}
+\end{align}
+$C(i)$为覆盖位置$i$的候选集合。$c_i$经归一化、Dropout和零初始化投影后，残差注入第一层之后的条件句状态；无候选时增量为零。融合位置使后续层持续处理词汇信息。LEBERT原用于BERT序列标注，本文将其融合思想迁移到自建因果GPT；ChineseBERT作为冻结特征来源。正向只编码上联，反向只编码候选下联，均以该方向已知条件构造特征。
+
+\begin{figure}[!htbp]
+\centering\resizebox{\linewidth}{!}{\input{figures/couplet_network}}
+\caption{词汇增强对联模型。冻结ChineseBERT提供条件跨度表示，词汇适配器在GPT第一层之后注入条件端增量；每层的位置残差连接上联与目标预测位置。$\mathcal D$为词库，$Q$为字符查询，$r_w$为词条残差；蓝线传递查询，橙线传递词汇增量，虚线边界表示冻结参数。正反向主干采用独立参数。}\label{fig:lexical}
+\end{figure}
+
+\Needspace{7\baselineskip}
+\textbf{位置对应与监督目标。}对联通常等长，相同位置承担对应功能。为强化这一联系，本文在每层预测下联第$j$字的状态中加入上联对应状态的投影，作为本实验的位置先验设计：
+\begin{equation}
+ \widetilde h_{t(j)}^{(\ell)}=h_{t(j)}^{(\ell)}+A^{(\ell)}h_{s(j)}^{(\ell)},\qquad
+ \mathcal L_f=\mathcal L_{\mathrm{CE}}+0.5\mathcal L_{\mathrm{struct}}.\label{eq:align}
+\end{equation}
+$s(j)$为上联位置，$t(j)$为预测目标字的位置，投影以零初始化。辅助损失依据参考下联，在有效位置抑制同位照用，鼓励参考支持的重复对应，并抑制无依据重复；重复关系考察先前至多7个位置。该设计把形式关系转化为概率优化目标，与提供词语信息的词汇通道共同训练。
+
+\textbf{数据与微调设置。}配对语料来自\href{https://github.com/wb14123/couplet-dataset}{couplet-dataset}、\href{https://github.com/v-zich/couplet-clean-dataset}{couplet-clean-dataset}和\href{https://gitlab.com/feng-7/VV-couplet}{VV-couplet}，按上联及父联关系组织划分。最终训练944,256对，验证和测试分别为51,600与49,448条配对；选点使用固定3,663对，生成评测使用2,617个锁定上联。反向学习$p_r(x\mid y)$，额外移除33,099对与保留集下联相交的训练记录。表~\ref{tab:sftconfig}汇总主要设置。
+
+\begin{table}[H]
+\centering\small
+\caption{直接微调基线与最终增强模型的训练设置}\label{tab:sftconfig}
+\begin{tabularx}{\linewidth}{Yccc}
+\toprule 设置&原框架直接微调&增强正向模型&增强反向模型\\\midrule
+训练配对数&400,290&944,256&911,157\\
+采样／遍历轮数&3&3&3\\
+有效批量&256&128&128\\
+优化更新数&4,692&22,131&21,357\\
+学习率&$3\!\times\!10^{-4}$峰值&$2\!\times\!10^{-5}$&$2\!\times\!10^{-5}$\\
+训练目标&下联及EOS交叉熵&交叉熵＋形式辅助项&反向交叉熵\\\bottomrule
+\end{tabularx}
+\end{table}
+
+各模型共享同源预训练起点，增强模型在已有任务权重上继续适配，以验证交叉熵选点，采用AdamW、BF16及梯度范数裁剪1。基线训练仅含五／七言；增强正向模型对其他长度赋予4倍采样权重，累计呈现2,832,768个样本。每个增强方向含34,759,428个可训练参数，冻结ChineseBERT另含147,337,984参数；反向模型独立训练并累计呈现2,733,471个样本。
+
+\textbf{候选选择与规则补强。}为减少只依赖高频表达的候选选择，参考双向条件概率重排思想\cite{mmi}，采用含EOS的平均对数概率评分：
+\begin{equation}
+ S(x,y)=\frac{\log p_f(y\mid x)}{|y|+1}+0.25\frac{\log p_r(x\mid y)}{|x|+1}.\label{eq:score}
+\end{equation}
+反向系数由验证集选择。候选来自束宽16的束搜索及8条固定采样，采样为top-$k=20$、温度0.8。规则约束在搜索中执行汉字、等长、同位避字、重复模式及可用句脚读音检查，再按式\eqref{eq:score}选择结果。无规则组仅屏蔽协议控制词元，允许自然EOS，最多生成63个新词元；有规则组按联长结束。规则在推理阶段补强GPT的形式执行能力。
+
+\Needspace{8\baselineskip}
+\subsection{实验结果}
+
+表~\ref{tab:maincomparison}比较相同2,617个上联及参考下联。基线采用原实验按验证损失选定的权重，补充推理使用与最终评测相同的束宽、采样数量和词元预算；其选择仅用正向分数，增强模型使用双向分数。五／七言子集含1,200条，其余长度含1,417条，分别列出以体现训练覆盖范围。
+
+\begin{table}[htbp]
+\centering\small
+\caption{原框架直接微调与增强系统的生成结果}\label{tab:maincomparison}
+\begin{tabularx}{\linewidth}{Yrrrr}
+\toprule &\multicolumn{2}{c}{五／七言（1,200条）}&\multicolumn{2}{c}{全长度（2,617条）}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+系统配置&chrF&结构通过率（\%）&chrF&结构通过率（\%）\\\midrule
+原框架直接微调&2.2991&68.08&1.5059&31.22\\
+增强模型，无规则&3.2208&81.17&3.0937&76.88\\
+增强模型，规则约束&3.2993&100.00&3.1585&100.00\\\bottomrule
+\end{tabularx}
+\par\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize 注：训练规模、可训练参数与候选选择方式见表~\ref{tab:sftconfig}及正文。结构通过率为等长汉字、同位避字与重复模式的联合通过率。\end{minipage}
+\end{table}
+
+在五／七言子集上，原框架的等长率为100\%，结构通过率为68.08\%；增强模型无规则时分别为100\%和81.17\%。因此，常规联长中的差异主要表现为同位用字与重复关系，而全长度结果还体现了训练长度覆盖的扩展。加入规则后，两类集合均达到所定义结构检查的100\%。
+
+\input{sections/generated_stage_table}
+
+\Needspace{7\baselineskip}
+表~\ref{tab:three_stages}展示具体变化。“且舒敞胸襟”的基线下联出现“放放”；增强模型改为“且放开眼界”，规则进一步避开首位的“且”。“经春秋冬夏”由连续重复“夏”转为完整枚举，再通过规则改成与季节并列结构相应的方位枚举。“菊梦依稀秋意远”的基线已较通顺，而增强无规则结果照用了第三位“依”，呈现了个体样例中的不同变化。
+
+为分析各通道，表~\ref{tab:ablation}保留最后一轮7种条件、各两种选择的全部14组结果。各组固定最终权重；同一行正向与双向选择共用候选，屏蔽仅作用于正向模型，反向模型始终完整。除第一行外均无规则约束。
+
+\begin{table}[htbp]
+\centering\small
+\caption{最后一轮固定权重推理消融（2,617个上联）}\label{tab:ablation}
+\begin{tabularx}{\linewidth}{Yrrrr}
+\toprule &\multicolumn{2}{c}{chrF}&\multicolumn{2}{c}{结构通过率（\%）}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+推理条件&正向选择&双向选择&正向选择&双向选择\\\midrule
+完整模型，规则约束&3.0424&3.1585&100.00&100.00\\
+完整模型，无规则&2.9625&3.0937&76.73&76.88\\
+屏蔽词汇融合&2.5367&2.7158&72.18&73.02\\
+屏蔽上下文投影&2.5989&2.8462&77.26&77.88\\
+屏蔽词条残差&2.7005&2.9932&76.88&77.03\\
+仅保留8192词匹配&2.8783&3.0386&75.54&75.12\\
+屏蔽同位置源端残差&0.5263&0.6045&0.15&0.73\\\bottomrule
+\end{tabularx}
+\end{table}
+
+\FloatBarrier
+\subsection{结果讨论}
+
+词汇融合为模型提供了可利用的条件信息。屏蔽该通道后，双向chrF由3.0937降至2.7158；按上联进行1,000次配对重采样，屏蔽相对完整模型的逐句chrF均值差95\%区间为$[-0.5314,-0.0638]$。这一结果与词汇信息参与上下联匹配的设计目标一致。同位置残差屏蔽后约24\%输出为空，显示当前权重的条件生成依赖该直接通道。
+
+规则约束的主要贡献是形式执行。双向结构通过率由76.88\%升至100\%，相差23.12个百分点；chrF由3.0937变为3.1585。前者来自搜索可行域中的显式检查，后者反映候选文本变化。对照文本显示，规则能够排除特定复制和重复错误，词汇及位置通道则参与候选内容的形成，两者作用于不同环节。
+
+偏旁技巧、典故理解与整联内容关系见第\ref{sec:limitations}节的案例分析。

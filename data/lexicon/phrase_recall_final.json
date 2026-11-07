@@ -1,0 +1,85 @@
+{
+  "status": "complete",
+  "results": {
+    "ltp_silver_occurrences": {
+      "total": 1131,
+      "v9_found": 1020,
+      "v10_found": 1052,
+      "dictionary_or_pinyin_found": 1042,
+      "trainable_dictionary_support_found": 1038,
+      "definition_found": 930,
+      "v9_found_rate": 0.9018567639257294,
+      "v10_found_rate": 0.9301503094606542,
+      "dictionary_or_pinyin_found_rate": 0.9213085764809903,
+      "trainable_dictionary_support_found_rate": 0.9177718832891246,
+      "definition_found_rate": 0.8222811671087533
+    },
+    "ltp_silver_unique": {
+      "total": 1025,
+      "v9_found": 915,
+      "v10_found": 946,
+      "dictionary_or_pinyin_found": 937,
+      "trainable_dictionary_support_found": 933,
+      "definition_found": 831,
+      "v9_found_rate": 0.8926829268292683,
+      "v10_found_rate": 0.9229268292682927,
+      "dictionary_or_pinyin_found_rate": 0.9141463414634147,
+      "trainable_dictionary_support_found_rate": 0.9102439024390244,
+      "definition_found_rate": 0.8107317073170732
+    },
+    "paper_human_sample_occurrences": {
+      "total": 26,
+      "v9_found": 24,
+      "v10_found": 24,
+      "dictionary_or_pinyin_found": 24,
+      "trainable_dictionary_support_found": 24,
+      "definition_found": 24,
+      "v9_found_rate": 0.9230769230769231,
+      "v10_found_rate": 0.9230769230769231,
+      "dictionary_or_pinyin_found_rate": 0.9230769230769231,
+      "trainable_dictionary_support_found_rate": 0.9230769230769231,
+      "definition_found_rate": 0.9230769230769231
+    },
+    "paper_human_sample_unique": {
+      "total": 26,
+      "v9_found": 24,
+      "v10_found": 24,
+      "dictionary_or_pinyin_found": 24,
+      "trainable_dictionary_support_found": 24,
+      "definition_found": 24,
+      "v9_found_rate": 0.9230769230769231,
+      "v10_found_rate": 0.9230769230769231,
+      "dictionary_or_pinyin_found_rate": 0.9230769230769231,
+      "trainable_dictionary_support_found_rate": 0.9230769230769231,
+      "definition_found_rate": 0.9230769230769231
+    },
+    "external_ancient_wordlist_not_merged": {
+      "multiword_entries": 26858,
+      "v9_found": 12112,
+      "v10_found": 25521,
+      "v10_rate": 0.9502196738401966,
+      "limitations": "word-list membership only; not contextual segmentation; source lacks explicit open data license, not merged"
+    }
+  },
+  "source_span_coverage": {
+    "dictionary_or_pinyin": {
+      "rows": 49241,
+      "characters": 274664,
+      "covered_characters": 204899,
+      "fully_covered_rows": 16955,
+      "character_coverage": 0.745998747560656,
+      "full_sentence_coverage": 0.3443268820698199
+    },
+    "all_sources": {
+      "rows": 49241,
+      "characters": 274664,
+      "covered_characters": 217633,
+      "fully_covered_rows": 20380,
+      "character_coverage": 0.7923608481635744,
+      "full_sentence_coverage": 0.41388273999309516
+    }
+  },
+  "no_expert_generalization_claim": true,
+  "single_character_fallback_counted": false,
+  "lookup_sha_frozen": "25f31cf9a33b20643f5c1ba72bd4f2ad0b73ea78bf8bccadb23a2395c9d29d83"
+}

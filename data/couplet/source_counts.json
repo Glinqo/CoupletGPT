@@ -1,0 +1,55 @@
+{
+  "original": {
+    "raw_rows": 774491,
+    "valid_rows": 755462,
+    "unique_first_seen": 750286,
+    "rejected_unsupported_character_or_internal_punctuation": 19028,
+    "overlap_prior_sources_or_repetition": 5176,
+    "rejected_separator_structure_mismatch": 1
+  },
+  "clean": {
+    "raw_rows": 744930,
+    "valid_rows": 727040,
+    "overlap_prior_sources_or_repetition": 727040,
+    "rejected_unsupported_character_or_internal_punctuation": 17889,
+    "rejected_separator_structure_mismatch": 1
+  },
+  "vv": {
+    "raw_rows": 785375,
+    "valid_rows": 766350,
+    "overlap_prior_sources_or_repetition": 753240,
+    "unique_first_seen": 13110,
+    "rejected_unsupported_character_or_internal_punctuation": 19020,
+    "rejected_clause_length_mismatch": 1,
+    "rejected_identical_lines": 3,
+    "rejected_separator_structure_mismatch": 1
+  },
+  "anchi": {
+    "raw_rows": 774491,
+    "valid_rows": 755462,
+    "overlap_prior_sources_or_repetition": 755462,
+    "rejected_unsupported_character_or_internal_punctuation": 19028,
+    "rejected_separator_structure_mismatch": 1
+  },
+  "hf_original": {
+    "raw_rows": 774491,
+    "valid_rows": 755462,
+    "overlap_prior_sources_or_repetition": 755462,
+    "rejected_unsupported_character_or_internal_punctuation": 19028,
+    "rejected_separator_structure_mismatch": 1
+  },
+  "hf_json": {
+    "raw_rows": 774491,
+    "valid_rows": 755462,
+    "overlap_prior_sources_or_repetition": 755151,
+    "rejected_unsupported_character_or_internal_punctuation": 19028,
+    "unique_first_seen": 311,
+    "rejected_separator_structure_mismatch": 1
+  },
+  "hf_100k": {
+    "raw_rows": 104000,
+    "valid_rows": 101489,
+    "overlap_prior_sources_or_repetition": 101489,
+    "rejected_unsupported_character_or_internal_punctuation": 2511
+  }
+}
