@@ -10,16 +10,18 @@
   "models_unchanged": true,
   "artifacts": {
     "project_report.pdf": {
-      "bytes": 556970,
-      "sha256": "075cf8787717ea72905b9c28e9347640496e4881b1f4291e284805ee581e52c0"
+      "bytes": 563185,
+      "sha256": "c662cebdb0b17744f78f5ac17973d983adac238c3a4c80cb8834d7458051ccd1"
     },
     "sample_outputs.pdf": {
       "bytes": 199531,
       "sha256": "42f794f846401aa221bd8ca77a73bd43b14fb1a79cc67ee26a888f4b8ac34364"
     },
     "latex_source.zip": {
-      "bytes": 37084,
-      "sha256": "6a7316bc9cde11e9bb87e5a6055f35ee23d17bb97173a5b313b6518290529bcb"
+      "bytes": 37319,
+      "sha256": "215c1f4688cba173503cc4d44681634b50ecdd00e0598a7b87fdef95c04dd802"
     }
-  }
+  },
+  "source_repository": "https://github.com/Glinqo/CoupletGPT",
+  "source_publication_status": "prepared_locally_pending_github_write_authentication"
 }
