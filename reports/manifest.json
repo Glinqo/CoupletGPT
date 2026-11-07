@@ -23,5 +23,7 @@
     }
   },
   "source_repository": "https://github.com/Glinqo/CoupletGPT",
-  "source_publication_status": "prepared_locally_pending_github_write_authentication"
+  "source_publication_status": "published",
+  "source_code_commit": "b6a382fb8eb15424552ecb62d4b3a2a924c93206",
+  "source_archive_url": "https://github.com/Glinqo/CoupletGPT/archive/refs/heads/main.zip"
 }
